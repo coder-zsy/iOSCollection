@@ -29,8 +29,6 @@
 
 singleton_implementation(PermissionCheckTools);
 
-//[[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]]
-
 - (void)openPermissionSetting {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
 }
