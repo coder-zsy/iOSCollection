@@ -8,9 +8,19 @@
 
 #import "ViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
-#import "PermissionCheckTools.h"
 
-@interface ViewController ()
+#import "PermissionUtils.h"
+
+#import <AddressBookUI/ABPeoplePickerNavigationController.h>
+#import <AddressBook/ABPerson.h>
+#import <AddressBookUI/ABPersonViewController.h>
+#import <ContactsUI/ContactsUI.h>
+
+#define LSY_CONTEXT 100
+
+#define LSYEventVerbose(frmt, ...) LOG_MAYBE(LOG_ASYNC_ENABLED, LOG_LEVEL_DEF, DDLogFlagVerbose, LSY_CONTEXT, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
+
+@interface ViewController ()<ABPeoplePickerNavigationControllerDelegate,CNContactPickerDelegate>
 
 @end
 
@@ -29,13 +39,12 @@
 }
 
 - (void)imagepickerAction:(UIButton *)button {
-//    [[PermissionCheckTools sharedInstance] checkLocationAuthorAuthorWithType:XYAuthorizationStatusWhenInUse callback:^(XYAuthorizationStatus status) {
-//
-//    }];
-    [[PermissionCheckTools sharedInstance] openPermissionSetting];
+    PermissionUtils * permissionUtils = [[PermissionUtils alloc] init];
+    [permissionUtils checkLocationAuthorAuthorWithType:XYAuthorizationStatusWhenInUse callback:^(XYAuthorizationStatus status) {
+
+    }];
+//    [[PermissionUtils sharedInstance] openPermissionSetting];
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

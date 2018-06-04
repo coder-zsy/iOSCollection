@@ -7,18 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A311A3D420231CE90058F3B2 /* PermissionCheckTools.m in Sources */ = {isa = PBXBuildFile; fileRef = A311A3D220231CE90058F3B2 /* PermissionCheckTools.m */; };
+		09B9443E6E52F01CD3ED1173 /* libPods-XYTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49759D4CE047CC724195C0AC /* libPods-XYTest.a */; };
 		A31540B2201E1C14009C69C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A31540B1201E1C14009C69C8 /* AppDelegate.m */; };
 		A31540B5201E1C14009C69C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A31540B4201E1C14009C69C8 /* ViewController.m */; };
 		A31540B8201E1C14009C69C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A31540B6201E1C14009C69C8 /* Main.storyboard */; };
 		A31540BA201E1C14009C69C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31540B9201E1C14009C69C8 /* Assets.xcassets */; };
 		A31540BD201E1C14009C69C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A31540BB201E1C14009C69C8 /* LaunchScreen.storyboard */; };
 		A31540C0201E1C14009C69C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A31540BF201E1C14009C69C8 /* main.m */; };
+		A3B15F81202A97EB00E33DEB /* ZSYPhotoBroswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B15F80202A97EB00E33DEB /* ZSYPhotoBroswerViewController.m */; };
+		A3B66D9C2044E9DB0014D318 /* XYLoggerFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B66D9B2044E9DB0014D318 /* XYLoggerFormatter.m */; };
+		A3B66D9F2044EBA20014D318 /* XYLogFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B66D9E2044EBA20014D318 /* XYLogFileManager.m */; };
+		A3B66DA42044FB960014D318 /* XYFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B66DA32044FB960014D318 /* XYFileLogger.m */; };
+		A3D016E620AAD83D00F80BDC /* GVUserDefaults+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D016D120AAD83D00F80BDC /* GVUserDefaults+Properties.m */; };
+		A3D016E720AAD83D00F80BDC /* GVUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D016D420AAD83D00F80BDC /* GVUserDefaults.m */; };
+		A3D016E820AAD83D00F80BDC /* AGTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D016D620AAD83D00F80BDC /* AGTimer.m */; };
+		A3D016E920AAD83D00F80BDC /* CodeTimestamps.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D016DA20AAD83D00F80BDC /* CodeTimestamps.m */; };
+		A3D016EA20AAD83D00F80BDC /* RXKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D016DD20AAD83D00F80BDC /* RXKeychain.m */; };
+		A3D016EB20AAD83D00F80BDC /* ScaleConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D016E220AAD83D00F80BDC /* ScaleConvert.m */; };
+		A3D016EC20AAD83D00F80BDC /* RXXMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D016E420AAD83D00F80BDC /* RXXMLDictionary.m */; };
+		A3D016F020AAD8C000F80BDC /* PermissionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D016EE20AAD8C000F80BDC /* PermissionUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A311A3D220231CE90058F3B2 /* PermissionCheckTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionCheckTools.m; sourceTree = "<group>"; };
-		A311A3D320231CE90058F3B2 /* PermissionCheckTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionCheckTools.h; sourceTree = "<group>"; };
+		49759D4CE047CC724195C0AC /* libPods-XYTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XYTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A311A3D520231D210058F3B2 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		A31540AD201E1C14009C69C8 /* XYTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XYTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A31540B0201E1C14009C69C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -30,6 +41,35 @@
 		A31540BC201E1C14009C69C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A31540BE201E1C14009C69C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A31540BF201E1C14009C69C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A3B15F7F202A97EB00E33DEB /* ZSYPhotoBroswerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSYPhotoBroswerViewController.h; sourceTree = "<group>"; };
+		A3B15F80202A97EB00E33DEB /* ZSYPhotoBroswerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSYPhotoBroswerViewController.m; sourceTree = "<group>"; };
+		A3B66D962043F2590014D318 /* XYTest.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYTest.pch; sourceTree = "<group>"; };
+		A3B66D9A2044E9DB0014D318 /* XYLoggerFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYLoggerFormatter.h; sourceTree = "<group>"; };
+		A3B66D9B2044E9DB0014D318 /* XYLoggerFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYLoggerFormatter.m; sourceTree = "<group>"; };
+		A3B66D9D2044EBA20014D318 /* XYLogFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYLogFileManager.h; sourceTree = "<group>"; };
+		A3B66D9E2044EBA20014D318 /* XYLogFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYLogFileManager.m; sourceTree = "<group>"; };
+		A3B66DA02044ED200014D318 /* XYFileLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYFileLogger.h; sourceTree = "<group>"; };
+		A3B66DA32044FB960014D318 /* XYFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYFileLogger.m; sourceTree = "<group>"; };
+		A3D016D120AAD83D00F80BDC /* GVUserDefaults+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GVUserDefaults+Properties.m"; sourceTree = "<group>"; };
+		A3D016D220AAD83D00F80BDC /* GVUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVUserDefaults.h; sourceTree = "<group>"; };
+		A3D016D320AAD83D00F80BDC /* GVUserDefaults+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GVUserDefaults+Properties.h"; sourceTree = "<group>"; };
+		A3D016D420AAD83D00F80BDC /* GVUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVUserDefaults.m; sourceTree = "<group>"; };
+		A3D016D620AAD83D00F80BDC /* AGTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTimer.m; sourceTree = "<group>"; };
+		A3D016D720AAD83D00F80BDC /* AGTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTimer.h; sourceTree = "<group>"; };
+		A3D016D920AAD83D00F80BDC /* CodeTimestamps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeTimestamps.h; sourceTree = "<group>"; };
+		A3D016DA20AAD83D00F80BDC /* CodeTimestamps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeTimestamps.m; sourceTree = "<group>"; };
+		A3D016DB20AAD83D00F80BDC /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		A3D016DD20AAD83D00F80BDC /* RXKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXKeychain.m; sourceTree = "<group>"; };
+		A3D016DE20AAD83D00F80BDC /* RXKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXKeychain.h; sourceTree = "<group>"; };
+		A3D016DF20AAD83D00F80BDC /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		A3D016E120AAD83D00F80BDC /* ScaleConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleConvert.h; sourceTree = "<group>"; };
+		A3D016E220AAD83D00F80BDC /* ScaleConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleConvert.m; sourceTree = "<group>"; };
+		A3D016E420AAD83D00F80BDC /* RXXMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXXMLDictionary.m; sourceTree = "<group>"; };
+		A3D016E520AAD83D00F80BDC /* RXXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXXMLDictionary.h; sourceTree = "<group>"; };
+		A3D016EE20AAD8C000F80BDC /* PermissionUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionUtils.m; sourceTree = "<group>"; };
+		A3D016EF20AAD8C000F80BDC /* PermissionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionUtils.h; sourceTree = "<group>"; };
+		C8CC903C5F70BB9D596C9EAE /* Pods-XYTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-XYTest/Pods-XYTest.release.xcconfig"; sourceTree = "<group>"; };
+		FAAA52A2B58B7950552CEFC1 /* Pods-XYTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XYTest/Pods-XYTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,18 +77,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B9443E6E52F01CD3ED1173 /* libPods-XYTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71314D2EC63DE9E6F4EBA33E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA52A2B58B7950552CEFC1 /* Pods-XYTest.debug.xcconfig */,
+				C8CC903C5F70BB9D596C9EAE /* Pods-XYTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A311A3D120231CE90058F3B2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A3D016ED20AAD8C000F80BDC /* Permission */,
+				A3D016D820AAD83D00F80BDC /* 方法计时器 */,
+				A3D016D520AAD83D00F80BDC /* AGTimer */,
+				A3D016D020AAD83D00F80BDC /* GVUserDefaults */,
+				A3D016DF20AAD83D00F80BDC /* Macros.h */,
+				A3D016DC20AAD83D00F80BDC /* RXKeyChain */,
+				A3D016E020AAD83D00F80BDC /* ScaleConvert */,
+				A3D016DB20AAD83D00F80BDC /* SynthesizeSingleton.h */,
+				A3D016E320AAD83D00F80BDC /* XMLDictionary */,
 				A311A3D520231D210058F3B2 /* Singleton.h */,
-				A311A3D320231CE90058F3B2 /* PermissionCheckTools.h */,
-				A311A3D220231CE90058F3B2 /* PermissionCheckTools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -58,6 +115,8 @@
 			children = (
 				A31540AF201E1C14009C69C8 /* XYTest */,
 				A31540AE201E1C14009C69C8 /* Products */,
+				71314D2EC63DE9E6F4EBA33E /* Pods */,
+				F8F7049A95DDA6F2DD2BC0D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +131,8 @@
 		A31540AF201E1C14009C69C8 /* XYTest */ = {
 			isa = PBXGroup;
 			children = (
+				A3B66D952043F21C0014D318 /* LogSystem */,
+				A3B15F7E202A946800E33DEB /* ZSYPhotoBroswer */,
 				A31540B0201E1C14009C69C8 /* AppDelegate.h */,
 				A31540B1201E1C14009C69C8 /* AppDelegate.m */,
 				A31540B3201E1C14009C69C8 /* ViewController.h */,
@@ -82,8 +143,104 @@
 				A31540BB201E1C14009C69C8 /* LaunchScreen.storyboard */,
 				A31540BE201E1C14009C69C8 /* Info.plist */,
 				A31540BF201E1C14009C69C8 /* main.m */,
+				A3B66D962043F2590014D318 /* XYTest.pch */,
 			);
 			path = XYTest;
+			sourceTree = "<group>";
+		};
+		A3B15F7E202A946800E33DEB /* ZSYPhotoBroswer */ = {
+			isa = PBXGroup;
+			children = (
+				A3B15F7F202A97EB00E33DEB /* ZSYPhotoBroswerViewController.h */,
+				A3B15F80202A97EB00E33DEB /* ZSYPhotoBroswerViewController.m */,
+			);
+			path = ZSYPhotoBroswer;
+			sourceTree = "<group>";
+		};
+		A3B66D952043F21C0014D318 /* LogSystem */ = {
+			isa = PBXGroup;
+			children = (
+				A3B66DA02044ED200014D318 /* XYFileLogger.h */,
+				A3B66DA32044FB960014D318 /* XYFileLogger.m */,
+				A3B66D9A2044E9DB0014D318 /* XYLoggerFormatter.h */,
+				A3B66D9B2044E9DB0014D318 /* XYLoggerFormatter.m */,
+				A3B66D9D2044EBA20014D318 /* XYLogFileManager.h */,
+				A3B66D9E2044EBA20014D318 /* XYLogFileManager.m */,
+			);
+			path = LogSystem;
+			sourceTree = "<group>";
+		};
+		A3D016D020AAD83D00F80BDC /* GVUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				A3D016D120AAD83D00F80BDC /* GVUserDefaults+Properties.m */,
+				A3D016D220AAD83D00F80BDC /* GVUserDefaults.h */,
+				A3D016D320AAD83D00F80BDC /* GVUserDefaults+Properties.h */,
+				A3D016D420AAD83D00F80BDC /* GVUserDefaults.m */,
+			);
+			path = GVUserDefaults;
+			sourceTree = "<group>";
+		};
+		A3D016D520AAD83D00F80BDC /* AGTimer */ = {
+			isa = PBXGroup;
+			children = (
+				A3D016D620AAD83D00F80BDC /* AGTimer.m */,
+				A3D016D720AAD83D00F80BDC /* AGTimer.h */,
+			);
+			path = AGTimer;
+			sourceTree = "<group>";
+		};
+		A3D016D820AAD83D00F80BDC /* 方法计时器 */ = {
+			isa = PBXGroup;
+			children = (
+				A3D016D920AAD83D00F80BDC /* CodeTimestamps.h */,
+				A3D016DA20AAD83D00F80BDC /* CodeTimestamps.m */,
+			);
+			path = "方法计时器";
+			sourceTree = "<group>";
+		};
+		A3D016DC20AAD83D00F80BDC /* RXKeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				A3D016DD20AAD83D00F80BDC /* RXKeychain.m */,
+				A3D016DE20AAD83D00F80BDC /* RXKeychain.h */,
+			);
+			path = RXKeyChain;
+			sourceTree = "<group>";
+		};
+		A3D016E020AAD83D00F80BDC /* ScaleConvert */ = {
+			isa = PBXGroup;
+			children = (
+				A3D016E120AAD83D00F80BDC /* ScaleConvert.h */,
+				A3D016E220AAD83D00F80BDC /* ScaleConvert.m */,
+			);
+			path = ScaleConvert;
+			sourceTree = "<group>";
+		};
+		A3D016E320AAD83D00F80BDC /* XMLDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				A3D016E420AAD83D00F80BDC /* RXXMLDictionary.m */,
+				A3D016E520AAD83D00F80BDC /* RXXMLDictionary.h */,
+			);
+			path = XMLDictionary;
+			sourceTree = "<group>";
+		};
+		A3D016ED20AAD8C000F80BDC /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				A3D016EF20AAD8C000F80BDC /* PermissionUtils.h */,
+				A3D016EE20AAD8C000F80BDC /* PermissionUtils.m */,
+			);
+			path = Permission;
+			sourceTree = "<group>";
+		};
+		F8F7049A95DDA6F2DD2BC0D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49759D4CE047CC724195C0AC /* libPods-XYTest.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,9 +250,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A31540C3201E1C14009C69C8 /* Build configuration list for PBXNativeTarget "XYTest" */;
 			buildPhases = (
+				8600C1232B9BF9E5D0223342 /* [CP] Check Pods Manifest.lock */,
 				A31540A9201E1C14009C69C8 /* Sources */,
 				A31540AA201E1C14009C69C8 /* Frameworks */,
 				A31540AB201E1C14009C69C8 /* Resources */,
+				97AE521FEF9CED83F6EB0305 /* [CP] Embed Pods Frameworks */,
+				41D20E0DD64CCAF8433260D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +312,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		41D20E0DD64CCAF8433260D2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XYTest/Pods-XYTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8600C1232B9BF9E5D0223342 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XYTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97AE521FEF9CED83F6EB0305 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XYTest/Pods-XYTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A31540A9201E1C14009C69C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -159,8 +370,19 @@
 			files = (
 				A31540B5201E1C14009C69C8 /* ViewController.m in Sources */,
 				A31540C0201E1C14009C69C8 /* main.m in Sources */,
+				A3D016EA20AAD83D00F80BDC /* RXKeychain.m in Sources */,
+				A3D016E620AAD83D00F80BDC /* GVUserDefaults+Properties.m in Sources */,
+				A3D016EB20AAD83D00F80BDC /* ScaleConvert.m in Sources */,
 				A31540B2201E1C14009C69C8 /* AppDelegate.m in Sources */,
-				A311A3D420231CE90058F3B2 /* PermissionCheckTools.m in Sources */,
+				A3B66D9F2044EBA20014D318 /* XYLogFileManager.m in Sources */,
+				A3D016E920AAD83D00F80BDC /* CodeTimestamps.m in Sources */,
+				A3D016E820AAD83D00F80BDC /* AGTimer.m in Sources */,
+				A3B66D9C2044E9DB0014D318 /* XYLoggerFormatter.m in Sources */,
+				A3D016E720AAD83D00F80BDC /* GVUserDefaults.m in Sources */,
+				A3B66DA42044FB960014D318 /* XYFileLogger.m in Sources */,
+				A3B15F81202A97EB00E33DEB /* ZSYPhotoBroswerViewController.m in Sources */,
+				A3D016F020AAD8C000F80BDC /* PermissionUtils.m in Sources */,
+				A3D016EC20AAD83D00F80BDC /* RXXMLDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,10 +514,13 @@
 		};
 		A31540C4201E1C14009C69C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAAA52A2B58B7950552CEFC1 /* Pods-XYTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HFV9TYWZXD;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XYTest/XYTest.pch";
 				INFOPLIST_FILE = XYTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -307,10 +532,13 @@
 		};
 		A31540C5201E1C14009C69C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8CC903C5F70BB9D596C9EAE /* Pods-XYTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HFV9TYWZXD;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XYTest/XYTest.pch";
 				INFOPLIST_FILE = XYTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

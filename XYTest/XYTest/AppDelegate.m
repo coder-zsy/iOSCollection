@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "PermissionUtils.h"
 @interface AppDelegate ()
 @end
 
@@ -17,6 +17,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
+    
+    
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
+    fileLogger.rollingFrequency = 60 * 60 * 24; // 每个文件超过24小时后会被新的日志覆盖
+    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;  //最多保存7个日志文件
+    [DDLog addLogger:fileLogger];
+    
+//    JHEventFileManager *fileManager = [[JHEventFileManager alloc] init];    //自定义日志文件管理
+//    JHEventLogger *fileLogger = [[JHEventLogger alloc] initWithLogFileManager:fileManager]; //自定义文件Logger
+//    fileLogger.rollingFrequency = 60 * 60 * 24; // 有效期是24小时
+//    fileLogger.logFileManager.maximumNumberOfLogFiles = 2;  //最多文件数量为2个
+//    fileLogger.logFormatter = [[JHEventFormatter alloc] init];  //日志消息格式化
+//    fileLogger.maximumFileSize = 1024*50;   //每个文件数量最大尺寸为50k
+//    fileLogger.logFileManager.logFilesDiskQuota = 200*1024;     //所有文件的尺寸最大为200k
+//    [DDLog addLogger:fileLogger];
     return YES;
 }
 
@@ -45,6 +62,46 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+- (CLLocationManager *)locationManager {
+    if (!_locationManager) {
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.delegate = self;
+    }
+    return _locationManager;
+}
 
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    __block XYAuthorizationStatus state = XYAuthorizationStatusNotDetermined;
+    switch (status) {
+        case kCLAuthorizationStatusNotDetermined:{
+            //未请求授权
+            state = XYAuthorizationStatusNotDetermined;
+        }
+            break;
+        case kCLAuthorizationStatusRestricted:{
+            //无相关权限，如：家长控制
+            state = XYAuthorizationStatusRestricted;
+        }
+            break;
+        case kCLAuthorizationStatusDenied:{
+            //已拒绝访问
+            state = XYAuthorizationStatusDenied;
+        }
+            break;
+        case kCLAuthorizationStatusAuthorizedAlways:{
+            //已获取授权，任何时候都可以使用(前台、后台)
+            state = XYAuthorizationStatusAuthorized;
+        }
+            break;
+        case kCLAuthorizationStatusAuthorizedWhenInUse:{
+            //仅授权了在应用程序使用时使用
+            state = XYAuthorizationStatusWhenInUse;
+        }
+            break;
+        default:
+            break;
+    }
+//    self.locationStatusBlock(state);
+}
 
 @end

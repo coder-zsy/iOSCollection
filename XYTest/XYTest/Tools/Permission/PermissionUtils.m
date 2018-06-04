@@ -6,32 +6,40 @@
 //  Copyright © 2018年 张时疫. All rights reserved.
 //
 
-#import "PermissionCheckTools.h"
+#import "PermissionUtils.h"
 
 #import <Photos/Photos.h>
 #import <CoreLocation/CoreLocation.h>
 #import <EventKit/EventKit.h>
+#import "AppDelegate.h"
+
 
 //#import <CoreTelephony/CoreTelephonyDefines.h>
 @import AddressBook;
 @import Contacts;
 @import CoreTelephony;
 
-@interface PermissionCheckTools ()<CLLocationManagerDelegate>
+@interface PermissionUtils ()
+//<CLLocationManagerDelegate>
 
 @property (nonatomic , strong) AuthorizationStatusBlock locationStatusBlock;
-@property (nonatomic , strong) CLLocationManager * locationManager;
+//@property (nonatomic , strong) CLLocationManager * locationManager;
 
 
 @end
 
-@implementation PermissionCheckTools
+@implementation PermissionUtils
 
-singleton_implementation(PermissionCheckTools);
+//singleton_implementation(PermissionUtils);
 
 - (void)openPermissionSetting {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+    NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    if([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
 }
+
+
 
 #pragma mark --- 相册 ---
 /** 获取相册权限
@@ -94,7 +102,10 @@ singleton_implementation(PermissionCheckTools);
 }
 #pragma mark --- 麦克风 ---
 /*检查麦克风权限
- * Privacy - Microphone Usage Description*/
+ * Privacy - Microphone Usage Description
+ * AVAudioSessionRecordPermissionUndetermined = 'undt’,// 未获取权限
+ * AVAudioSessionRecordPermissionDenied = 'deny’,//拒绝授权
+ * AVAudioSessionRecordPermissionGranted = ‘grant’//同意授权*/
 - (void)checkMicrophoneAuthorWithCallback:(AuthorizationStatusBlock)callback {
     __block XYAuthorizationStatus state = XYAuthorizationStatusNotDetermined;
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
@@ -183,6 +194,10 @@ singleton_implementation(PermissionCheckTools);
     }
     callback(state);
 }
+
+
+
+
 #pragma mark --- 日历备忘录 ---
 /**检查日历和备忘录权限
  * #import <EventKit/EventKit.h>
@@ -304,6 +319,7 @@ singleton_implementation(PermissionCheckTools);
         self.locationStatusBlock(state);
         return;
     }
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     CLAuthorizationStatus curStatus = [CLLocationManager authorizationStatus];
     switch (curStatus) {
         case kCLAuthorizationStatusNotDetermined:{
@@ -313,9 +329,9 @@ singleton_implementation(PermissionCheckTools);
             //只能请求一次，以后再请求无效，需要主动弹出弹框提示用户手动打开
             //requestAlwaysAuthorization
             if (status == XYAuthorizationStatusWhenInUse) {
-                [self.locationManager requestWhenInUseAuthorization];
+                [app.locationManager requestWhenInUseAuthorization];
             } else if (status == XYAuthorizationStatusAuthorized) {
-                [self.locationManager requestAlwaysAuthorization];
+                [app.locationManager requestAlwaysAuthorization];
             } else {
                 NSLog(@"好好传值不要闹！！");
             }
@@ -350,46 +366,46 @@ singleton_implementation(PermissionCheckTools);
     }
 }
 
-- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
-    __block XYAuthorizationStatus state = XYAuthorizationStatusNotDetermined;
-    switch (status) {
-        case kCLAuthorizationStatusNotDetermined:{
-            //未请求授权
-            state = XYAuthorizationStatusNotDetermined;
-        }
-            break;
-        case kCLAuthorizationStatusRestricted:{
-            //无相关权限，如：家长控制
-            state = XYAuthorizationStatusRestricted;
-        }
-            break;
-        case kCLAuthorizationStatusDenied:{
-            //已拒绝访问
-            state = XYAuthorizationStatusDenied;
-        }
-            break;
-        case kCLAuthorizationStatusAuthorizedAlways:{
-            //已获取授权，任何时候都可以使用(前台、后台)
-            state = XYAuthorizationStatusAuthorized;
-        }
-            break;
-        case kCLAuthorizationStatusAuthorizedWhenInUse:{
-            //仅授权了在应用程序使用时使用
-            state = XYAuthorizationStatusWhenInUse;
-        }
-            break;
-        default:
-            break;
-    }
-    self.locationStatusBlock(state);
-}
+//- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+//    __block XYAuthorizationStatus state = XYAuthorizationStatusNotDetermined;
+//    switch (status) {
+//        case kCLAuthorizationStatusNotDetermined:{
+//            //未请求授权
+//            state = XYAuthorizationStatusNotDetermined;
+//        }
+//            break;
+//        case kCLAuthorizationStatusRestricted:{
+//            //无相关权限，如：家长控制
+//            state = XYAuthorizationStatusRestricted;
+//        }
+//            break;
+//        case kCLAuthorizationStatusDenied:{
+//            //已拒绝访问
+//            state = XYAuthorizationStatusDenied;
+//        }
+//            break;
+//        case kCLAuthorizationStatusAuthorizedAlways:{
+//            //已获取授权，任何时候都可以使用(前台、后台)
+//            state = XYAuthorizationStatusAuthorized;
+//        }
+//            break;
+//        case kCLAuthorizationStatusAuthorizedWhenInUse:{
+//            //仅授权了在应用程序使用时使用
+//            state = XYAuthorizationStatusWhenInUse;
+//        }
+//            break;
+//        default:
+//            break;
+//    }
+//    self.locationStatusBlock(state);
+//}
 
-- (CLLocationManager *)locationManager {
-    if (!_locationManager) {
-        _locationManager = [[CLLocationManager alloc] init];
-        _locationManager.delegate = self;
-    }
-    return _locationManager;
-}
+//- (CLLocationManager *)locationManager {
+//    if (!_locationManager) {
+//        _locationManager = [[CLLocationManager alloc] init];
+//        _locationManager.delegate = self;
+//    }
+//    return _locationManager;
+//}
 @end
 
