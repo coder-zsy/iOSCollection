@@ -14,6 +14,7 @@
 		A31540BA201E1C14009C69C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31540B9201E1C14009C69C8 /* Assets.xcassets */; };
 		A31540BD201E1C14009C69C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A31540BB201E1C14009C69C8 /* LaunchScreen.storyboard */; };
 		A31540C0201E1C14009C69C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A31540BF201E1C14009C69C8 /* main.m */; };
+		A322290720E782C00095B610 /* LocationCoordUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A322290620E782C00095B610 /* LocationCoordUtils.m */; };
 		A3B15F81202A97EB00E33DEB /* ZSYPhotoBroswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B15F80202A97EB00E33DEB /* ZSYPhotoBroswerViewController.m */; };
 		A3B66D9C2044E9DB0014D318 /* XYLoggerFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B66D9B2044E9DB0014D318 /* XYLoggerFormatter.m */; };
 		A3B66D9F2044EBA20014D318 /* XYLogFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B66D9E2044EBA20014D318 /* XYLogFileManager.m */; };
@@ -26,6 +27,13 @@
 		A3D016EB20AAD83D00F80BDC /* ScaleConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D016E220AAD83D00F80BDC /* ScaleConvert.m */; };
 		A3D016EC20AAD83D00F80BDC /* RXXMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D016E420AAD83D00F80BDC /* RXXMLDictionary.m */; };
 		A3D016F020AAD8C000F80BDC /* PermissionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D016EE20AAD8C000F80BDC /* PermissionUtils.m */; };
+		A3EDAC4120EC69F500E1EE03 /* AudioConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = A3EDAC3420EC69F500E1EE03 /* AudioConverter.mm */; };
+		A3EDAC4220EC69F500E1EE03 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3EDAC3620EC69F500E1EE03 /* libopencore-amrwb.a */; };
+		A3EDAC4320EC69F500E1EE03 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3EDAC3720EC69F500E1EE03 /* libopencore-amrnb.a */; };
+		A3EDAC4420EC69F500E1EE03 /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = A3EDAC3C20EC69F500E1EE03 /* wav.mm */; };
+		A3EDAC4520EC69F500E1EE03 /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = A3EDAC3D20EC69F500E1EE03 /* amrFileCodec.mm */; };
+		A3EDAC5320EC7BA900E1EE03 /* AudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EDAC5120EC7BA900E1EE03 /* AudioViewController.m */; };
+		A3EDAC5420EC7BA900E1EE03 /* AudioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3EDAC5220EC7BA900E1EE03 /* AudioViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +49,8 @@
 		A31540BC201E1C14009C69C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A31540BE201E1C14009C69C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A31540BF201E1C14009C69C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A322290520E782C00095B610 /* LocationCoordUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationCoordUtils.h; sourceTree = "<group>"; };
+		A322290620E782C00095B610 /* LocationCoordUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationCoordUtils.m; sourceTree = "<group>"; };
 		A3B15F7F202A97EB00E33DEB /* ZSYPhotoBroswerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSYPhotoBroswerViewController.h; sourceTree = "<group>"; };
 		A3B15F80202A97EB00E33DEB /* ZSYPhotoBroswerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSYPhotoBroswerViewController.m; sourceTree = "<group>"; };
 		A3B66D962043F2590014D318 /* XYTest.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYTest.pch; sourceTree = "<group>"; };
@@ -68,6 +78,21 @@
 		A3D016E520AAD83D00F80BDC /* RXXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXXMLDictionary.h; sourceTree = "<group>"; };
 		A3D016EE20AAD8C000F80BDC /* PermissionUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionUtils.m; sourceTree = "<group>"; };
 		A3D016EF20AAD8C000F80BDC /* PermissionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionUtils.h; sourceTree = "<group>"; };
+		A3EDAC3220EC69F500E1EE03 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		A3EDAC3320EC69F500E1EE03 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		A3EDAC3420EC69F500E1EE03 /* AudioConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioConverter.mm; sourceTree = "<group>"; };
+		A3EDAC3620EC69F500E1EE03 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		A3EDAC3720EC69F500E1EE03 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		A3EDAC3920EC69F500E1EE03 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		A3EDAC3A20EC69F500E1EE03 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		A3EDAC3C20EC69F500E1EE03 /* wav.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wav.mm; sourceTree = "<group>"; };
+		A3EDAC3D20EC69F500E1EE03 /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
+		A3EDAC3E20EC69F500E1EE03 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		A3EDAC3F20EC69F500E1EE03 /* wav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wav.h; sourceTree = "<group>"; };
+		A3EDAC4020EC69F500E1EE03 /* AudioConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioConverter.h; sourceTree = "<group>"; };
+		A3EDAC5020EC7BA900E1EE03 /* AudioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioViewController.h; sourceTree = "<group>"; };
+		A3EDAC5120EC7BA900E1EE03 /* AudioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioViewController.m; sourceTree = "<group>"; };
+		A3EDAC5220EC7BA900E1EE03 /* AudioViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioViewController.xib; sourceTree = "<group>"; };
 		C8CC903C5F70BB9D596C9EAE /* Pods-XYTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-XYTest/Pods-XYTest.release.xcconfig"; sourceTree = "<group>"; };
 		FAAA52A2B58B7950552CEFC1 /* Pods-XYTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XYTest/Pods-XYTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3EDAC4220EC69F500E1EE03 /* libopencore-amrwb.a in Frameworks */,
+				A3EDAC4320EC69F500E1EE03 /* libopencore-amrnb.a in Frameworks */,
 				09B9443E6E52F01CD3ED1173 /* libPods-XYTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +123,7 @@
 		A311A3D120231CE90058F3B2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A322290420E782C00095B610 /* Maps */,
 				A3D016ED20AAD8C000F80BDC /* Permission */,
 				A3D016D820AAD83D00F80BDC /* 方法计时器 */,
 				A3D016D520AAD83D00F80BDC /* AGTimer */,
@@ -131,12 +159,16 @@
 		A31540AF201E1C14009C69C8 /* XYTest */ = {
 			isa = PBXGroup;
 			children = (
+				A3EDAC3020EC69F500E1EE03 /* AudioConverter */,
 				A3B66D952043F21C0014D318 /* LogSystem */,
 				A3B15F7E202A946800E33DEB /* ZSYPhotoBroswer */,
 				A31540B0201E1C14009C69C8 /* AppDelegate.h */,
 				A31540B1201E1C14009C69C8 /* AppDelegate.m */,
 				A31540B3201E1C14009C69C8 /* ViewController.h */,
 				A31540B4201E1C14009C69C8 /* ViewController.m */,
+				A3EDAC5020EC7BA900E1EE03 /* AudioViewController.h */,
+				A3EDAC5120EC7BA900E1EE03 /* AudioViewController.m */,
+				A3EDAC5220EC7BA900E1EE03 /* AudioViewController.xib */,
 				A311A3D120231CE90058F3B2 /* Tools */,
 				A31540B9201E1C14009C69C8 /* Assets.xcassets */,
 				A31540B6201E1C14009C69C8 /* Main.storyboard */,
@@ -146,6 +178,15 @@
 				A3B66D962043F2590014D318 /* XYTest.pch */,
 			);
 			path = XYTest;
+			sourceTree = "<group>";
+		};
+		A322290420E782C00095B610 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				A322290520E782C00095B610 /* LocationCoordUtils.h */,
+				A322290620E782C00095B610 /* LocationCoordUtils.m */,
+			);
+			path = Maps;
 			sourceTree = "<group>";
 		};
 		A3B15F7E202A946800E33DEB /* ZSYPhotoBroswer */ = {
@@ -235,6 +276,57 @@
 			path = Permission;
 			sourceTree = "<group>";
 		};
+		A3EDAC3020EC69F500E1EE03 /* AudioConverter */ = {
+			isa = PBXGroup;
+			children = (
+				A3EDAC3120EC69F500E1EE03 /* opencore-amrwb */,
+				A3EDAC3520EC69F500E1EE03 /* lib */,
+				A3EDAC3820EC69F500E1EE03 /* opencore-amrnb */,
+				A3EDAC3B20EC69F500E1EE03 /* amrwapper */,
+				A3EDAC4020EC69F500E1EE03 /* AudioConverter.h */,
+				A3EDAC3420EC69F500E1EE03 /* AudioConverter.mm */,
+			);
+			path = AudioConverter;
+			sourceTree = "<group>";
+		};
+		A3EDAC3120EC69F500E1EE03 /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				A3EDAC3220EC69F500E1EE03 /* if_rom.h */,
+				A3EDAC3320EC69F500E1EE03 /* dec_if.h */,
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
+		A3EDAC3520EC69F500E1EE03 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				A3EDAC3620EC69F500E1EE03 /* libopencore-amrwb.a */,
+				A3EDAC3720EC69F500E1EE03 /* libopencore-amrnb.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		A3EDAC3820EC69F500E1EE03 /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				A3EDAC3920EC69F500E1EE03 /* interf_dec.h */,
+				A3EDAC3A20EC69F500E1EE03 /* interf_enc.h */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		A3EDAC3B20EC69F500E1EE03 /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+				A3EDAC3C20EC69F500E1EE03 /* wav.mm */,
+				A3EDAC3D20EC69F500E1EE03 /* amrFileCodec.mm */,
+				A3EDAC3E20EC69F500E1EE03 /* amrFileCodec.h */,
+				A3EDAC3F20EC69F500E1EE03 /* wav.h */,
+			);
+			path = amrwapper;
+			sourceTree = "<group>";
+		};
 		F8F7049A95DDA6F2DD2BC0D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A31540BD201E1C14009C69C8 /* LaunchScreen.storyboard in Resources */,
+				A3EDAC5420EC7BA900E1EE03 /* AudioViewController.xib in Resources */,
 				A31540BA201E1C14009C69C8 /* Assets.xcassets in Resources */,
 				A31540B8201E1C14009C69C8 /* Main.storyboard in Resources */,
 			);
@@ -368,13 +461,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A322290720E782C00095B610 /* LocationCoordUtils.m in Sources */,
 				A31540B5201E1C14009C69C8 /* ViewController.m in Sources */,
 				A31540C0201E1C14009C69C8 /* main.m in Sources */,
 				A3D016EA20AAD83D00F80BDC /* RXKeychain.m in Sources */,
 				A3D016E620AAD83D00F80BDC /* GVUserDefaults+Properties.m in Sources */,
+				A3EDAC5320EC7BA900E1EE03 /* AudioViewController.m in Sources */,
 				A3D016EB20AAD83D00F80BDC /* ScaleConvert.m in Sources */,
 				A31540B2201E1C14009C69C8 /* AppDelegate.m in Sources */,
 				A3B66D9F2044EBA20014D318 /* XYLogFileManager.m in Sources */,
+				A3EDAC4120EC69F500E1EE03 /* AudioConverter.mm in Sources */,
 				A3D016E920AAD83D00F80BDC /* CodeTimestamps.m in Sources */,
 				A3D016E820AAD83D00F80BDC /* AGTimer.m in Sources */,
 				A3B66D9C2044E9DB0014D318 /* XYLoggerFormatter.m in Sources */,
@@ -382,6 +478,8 @@
 				A3B66DA42044FB960014D318 /* XYFileLogger.m in Sources */,
 				A3B15F81202A97EB00E33DEB /* ZSYPhotoBroswerViewController.m in Sources */,
 				A3D016F020AAD8C000F80BDC /* PermissionUtils.m in Sources */,
+				A3EDAC4420EC69F500E1EE03 /* wav.mm in Sources */,
+				A3EDAC4520EC69F500E1EE03 /* amrFileCodec.mm in Sources */,
 				A3D016EC20AAD83D00F80BDC /* RXXMLDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,7 +554,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -505,7 +603,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -522,8 +620,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYTest/XYTest.pch";
 				INFOPLIST_FILE = XYTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XYTest/AudioConverter/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.zsy.XYTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -540,8 +642,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYTest/XYTest.pch";
 				INFOPLIST_FILE = XYTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XYTest/AudioConverter/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.zsy.XYTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

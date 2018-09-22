@@ -195,9 +195,6 @@
     callback(state);
 }
 
-
-
-
 #pragma mark --- 日历备忘录 ---
 /**检查日历和备忘录权限
  * #import <EventKit/EventKit.h>

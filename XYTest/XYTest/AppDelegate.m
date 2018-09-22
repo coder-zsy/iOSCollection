@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PermissionUtils.h"
+#import "ViewController.h"
 @interface AppDelegate ()
 @end
 
@@ -16,9 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-
-    
-    
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
@@ -34,6 +32,13 @@
 //    fileLogger.maximumFileSize = 1024*50;   //每个文件数量最大尺寸为50k
 //    fileLogger.logFileManager.logFilesDiskQuota = 200*1024;     //所有文件的尺寸最大为200k
 //    [DDLog addLogger:fileLogger];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    ViewController *rootViewController = [[ViewController alloc] init];
+    rootViewController.view.backgroundColor = [UIColor whiteColor];
+    UINavigationController * rootNav = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    self.window.rootViewController = rootNav;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
