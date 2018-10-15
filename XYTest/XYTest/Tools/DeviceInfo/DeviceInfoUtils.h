@@ -1,11 +1,12 @@
 //
 //  DeviceInfoUtils.h
-//  jiedanyi3
+//  XYTest
 //
 //  Created by 张时疫 on 2018/6/13.
-//  Copyright © 2018年 Facebook. All rights reserved.
+//  Copyright © 2018年 张时疫. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
 @interface DeviceInfoUtils : NSObject
@@ -14,15 +15,11 @@
 
 + (BOOL)takePhoneWithPhoneNum:(NSString *)phoneNum;
 
-+ (NSString *)getPushNotificationDeviceToken;
-
 + (BOOL)openSafariWithUrl:(NSString *)url;
 
 + (BOOL)openJDYAtAppStore;
 
 + (BOOL)openJDYCommandAtAppStore;
-
-+ (void)resetApiPrefixWithDictionary:(NSDictionary *)dictionary;
 
 /**
  * 有刘海的手机...

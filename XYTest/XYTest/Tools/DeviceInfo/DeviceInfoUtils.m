@@ -1,13 +1,13 @@
 //
 //  DeviceInfoUtils.m
-//  jiedanyi3
+//  XYTest
 //
 //  Created by 张时疫 on 2018/6/13.
-//  Copyright © 2018年 Facebook. All rights reserved.
+//  Copyright © 2018年 张时疫. All rights reserved.
 //
-
 #import "DeviceInfoUtils.h"
 #import <sys/utsname.h>
+
 @implementation DeviceInfoUtils
 
 + (NSString *)getAppVersion {
@@ -26,12 +26,6 @@
   return [DeviceInfoUtils openUrlWithUrlString:string];
 }
 
-+ (NSString *)getPushNotificationDeviceToken {
-  NSString * deviceToken = [NSUserDefaults stringForKey:REMOTE_NOTIFICATION_DEVICETOKEN];
-  deviceToken = deviceToken && deviceToken.length > 0 ? deviceToken : @"";
-  return deviceToken;
-}
-
 + (BOOL)openJDYAtAppStore {
   NSString* appstoreUrlString =@"itms-apps://itunes.apple.com/cn/app/id1004977556?mt=8";
   return [DeviceInfoUtils openUrlWithUrlString:appstoreUrlString];
@@ -41,21 +35,6 @@
   NSString*appstoreUrlString = [NSString stringWithFormat:
                                 @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=1004977556"];
   return [DeviceInfoUtils openUrlWithUrlString:appstoreUrlString];
-}
-
-+ (void)resetApiPrefixWithDictionary:(NSDictionary *)dictionary {
-  for (NSString * apiName in dictionary.allKeys) {
-    NSString * url = [dictionary objectForKey:apiName];
-    if ([apiName isEqualToString:API_PREFIX_BASEURL]) {
-      [NSUserDefaults setObject:url forKey:API_PREFIX_BASEURL];
-    } else if ([apiName isEqualToString:API_PREFIX_HTMLURL]) {
-      [NSUserDefaults setObject:url forKey:API_PREFIX_HTMLURL];
-    } else if ([apiName isEqualToString:API_PREFIX_EVENTURL]) {
-      [NSUserDefaults setObject:url forKey:API_PREFIX_EVENTURL];
-    } else if ([apiName isEqualToString:API_PREFIX_WWWURL]) {
-      [NSUserDefaults setObject:url forKey:API_PREFIX_WWWURL];
-    }
-  }
 }
 
 + (BOOL)openSafariWithUrl:(NSString *)url {
@@ -77,7 +56,7 @@
     if ([[UIApplication sharedApplication] openURL:url]) {
       return  [[UIApplication sharedApplication] openURL:url];
     } else {
-      XYLog(@"can not open");
+      NSLog(@"can not open");
       return NO;
     }
   }
