@@ -15,6 +15,7 @@
 		A31540BD201E1C14009C69C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A31540BB201E1C14009C69C8 /* LaunchScreen.storyboard */; };
 		A31540C0201E1C14009C69C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A31540BF201E1C14009C69C8 /* main.m */; };
 		A322290720E782C00095B610 /* LocationCoordUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A322290620E782C00095B610 /* LocationCoordUtils.m */; };
+		A331E1602174AE7500317FD6 /* DeviceInfoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A331E15E2174AE7500317FD6 /* DeviceInfoUtils.m */; };
 		A3B15F81202A97EB00E33DEB /* ZSYPhotoBroswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B15F80202A97EB00E33DEB /* ZSYPhotoBroswerViewController.m */; };
 		A3B66D9C2044E9DB0014D318 /* XYLoggerFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B66D9B2044E9DB0014D318 /* XYLoggerFormatter.m */; };
 		A3B66D9F2044EBA20014D318 /* XYLogFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B66D9E2044EBA20014D318 /* XYLogFileManager.m */; };
@@ -51,6 +52,8 @@
 		A31540BF201E1C14009C69C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A322290520E782C00095B610 /* LocationCoordUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationCoordUtils.h; sourceTree = "<group>"; };
 		A322290620E782C00095B610 /* LocationCoordUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationCoordUtils.m; sourceTree = "<group>"; };
+		A331E15E2174AE7500317FD6 /* DeviceInfoUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfoUtils.m; sourceTree = "<group>"; };
+		A331E15F2174AE7500317FD6 /* DeviceInfoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfoUtils.h; sourceTree = "<group>"; };
 		A3B15F7F202A97EB00E33DEB /* ZSYPhotoBroswerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSYPhotoBroswerViewController.h; sourceTree = "<group>"; };
 		A3B15F80202A97EB00E33DEB /* ZSYPhotoBroswerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZSYPhotoBroswerViewController.m; sourceTree = "<group>"; };
 		A3B66D962043F2590014D318 /* XYTest.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYTest.pch; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 		A311A3D120231CE90058F3B2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A331E15D2174AE7500317FD6 /* DeviceInfo */,
 				A322290420E782C00095B610 /* Maps */,
 				A3D016ED20AAD8C000F80BDC /* Permission */,
 				A3D016D820AAD83D00F80BDC /* 方法计时器 */,
@@ -189,6 +193,15 @@
 			path = Maps;
 			sourceTree = "<group>";
 		};
+		A331E15D2174AE7500317FD6 /* DeviceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				A331E15F2174AE7500317FD6 /* DeviceInfoUtils.h */,
+				A331E15E2174AE7500317FD6 /* DeviceInfoUtils.m */,
+			);
+			path = DeviceInfo;
+			sourceTree = "<group>";
+		};
 		A3B15F7E202A946800E33DEB /* ZSYPhotoBroswer */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,10 +227,10 @@
 		A3D016D020AAD83D00F80BDC /* GVUserDefaults */ = {
 			isa = PBXGroup;
 			children = (
-				A3D016D120AAD83D00F80BDC /* GVUserDefaults+Properties.m */,
 				A3D016D220AAD83D00F80BDC /* GVUserDefaults.h */,
-				A3D016D320AAD83D00F80BDC /* GVUserDefaults+Properties.h */,
 				A3D016D420AAD83D00F80BDC /* GVUserDefaults.m */,
+				A3D016D320AAD83D00F80BDC /* GVUserDefaults+Properties.h */,
+				A3D016D120AAD83D00F80BDC /* GVUserDefaults+Properties.m */,
 			);
 			path = GVUserDefaults;
 			sourceTree = "<group>";
@@ -225,8 +238,8 @@
 		A3D016D520AAD83D00F80BDC /* AGTimer */ = {
 			isa = PBXGroup;
 			children = (
-				A3D016D620AAD83D00F80BDC /* AGTimer.m */,
 				A3D016D720AAD83D00F80BDC /* AGTimer.h */,
+				A3D016D620AAD83D00F80BDC /* AGTimer.m */,
 			);
 			path = AGTimer;
 			sourceTree = "<group>";
@@ -481,6 +494,7 @@
 				A3EDAC4420EC69F500E1EE03 /* wav.mm in Sources */,
 				A3EDAC4520EC69F500E1EE03 /* amrFileCodec.mm in Sources */,
 				A3D016EC20AAD83D00F80BDC /* RXXMLDictionary.m in Sources */,
+				A331E1602174AE7500317FD6 /* DeviceInfoUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
