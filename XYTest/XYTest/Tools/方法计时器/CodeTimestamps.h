@@ -53,7 +53,7 @@ if (!UniqueTokenMacro) {x; UniqueTokenMacro = YES; }}
 // Speed performance-tuning functions & macros.
 void LogTimeStampInMethod(const char *fnName, int lineNum);
 void LogTimestampChunkInMethod(const char *fnName, int lineNum, BOOL isStart, BOOL isEnd);
-void printAllLogs();
+void printAllLogs(void);
 #ifdef USE_TIMESTAMPS
 
 #define LogTimestamp LogTimeStampInMethod(__FUNCTION__, __LINE__)

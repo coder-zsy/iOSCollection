@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudioViewController">
+            <connections>
+                <outlet property="amrFilePathLabel" destination="bkm-d3-xQh" id="3dV-ks-ldt"/>
+                <outlet property="recordFilePathLabel" destination="pyW-cq-7Cu" id="VRD-p2-GJJ"/>
+                <outlet property="startButton" destination="yHw-bc-jpv" id="ySa-De-Ibt"/>
+                <outlet property="view" destination="wGe-EZ-DXa" id="MQv-jS-O01"/>
+                <outlet property="wavFilePathLabel" destination="H5e-pK-kDf" id="fR3-Rt-YVq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="wGe-EZ-DXa">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHw-bc-jpv">
+                    <rect key="frame" x="57.5" y="193.5" width="100" height="40"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="0Q7-wf-9Rg"/>
+                        <constraint firstAttribute="height" constant="40" id="NGu-ET-SvX"/>
+                    </constraints>
+                    <state key="normal" title="开始录音"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="selectorstartRecording:" destination="-1" eventType="touchUpInside" id="tnt-hW-2Mo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfS-Vr-S3t">
+                    <rect key="frame" x="217.5" y="193.5" width="100" height="40"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="结束录音">
+                        <color key="titleColor" red="0.89411764709999997" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="endRecording:" destination="-1" eventType="touchUpInside" id="iM4-FL-bm3"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="录音文件路径:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIM-UP-7n6">
+                    <rect key="frame" x="15" y="248.5" width="90" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyW-cq-7Cu">
+                    <rect key="frame" x="110" y="248.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.98823529409999999" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7y-jB-1ay">
+                    <rect key="frame" x="57.5" y="527" width="100" height="40"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ANA-Zp-T6I"/>
+                        <constraint firstAttribute="width" constant="100" id="sNU-zG-lqZ"/>
+                    </constraints>
+                    <state key="normal" title="AMR-&gt;WAV"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="amrTowavAction:" destination="-1" eventType="touchUpInside" id="2AS-gw-4jd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TP-Vo-ZDC">
+                    <rect key="frame" x="217.5" y="527" width="100" height="40"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="f7h-7z-Js4"/>
+                        <constraint firstAttribute="height" constant="40" id="sgd-vs-Pac"/>
+                    </constraints>
+                    <state key="normal" title="WAV-&gt;AMR"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="wavToamrAction:" destination="-1" eventType="touchUpInside" id="ctH-UJ-rbW"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="转化后的AMR文件路径:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAW-T6-tEd">
+                    <rect key="frame" x="15" y="485" width="149" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5e-pK-kDf">
+                    <rect key="frame" x="169" y="461.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.98823529409999999" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkm-d3-xQh">
+                    <rect key="frame" x="169" y="493.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.98823529409999999" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="转化后的WAV文件路径:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWP-HM-Kue">
+                    <rect key="frame" x="15" y="453" width="149" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spk-Rf-Trs">
+                    <rect key="frame" x="57.5" y="582" width="100" height="40"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="播放结果"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="playConvertResultOfWav:" destination="-1" eventType="touchUpInside" id="SWR-8t-Gur"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="从iOS4开始, AVAudioPlayer不再支持对amr格式进行播放, 需要测试转化后的文件请到沙盒中播放对应的文件" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ya-kq-O2d">
+                    <rect key="frame" x="187.5" y="577" width="160" height="58"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.98823529409999999" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yHw-bc-jpv" firstAttribute="trailing" secondItem="wGe-EZ-DXa" secondAttribute="centerX" constant="-30" id="0jz-D0-gIi"/>
+                <constraint firstItem="3ya-kq-O2d" firstAttribute="top" secondItem="7TP-Vo-ZDC" secondAttribute="bottom" constant="10" id="4b8-E1-E1D"/>
+                <constraint firstItem="spk-Rf-Trs" firstAttribute="height" secondItem="f7y-jB-1ay" secondAttribute="height" id="5dV-Uj-6r1"/>
+                <constraint firstItem="spk-Rf-Trs" firstAttribute="top" secondItem="f7y-jB-1ay" secondAttribute="bottom" constant="15" id="8Gi-Qr-MdX"/>
+                <constraint firstItem="pyW-cq-7Cu" firstAttribute="leading" secondItem="SIM-UP-7n6" secondAttribute="trailing" constant="5" id="9Ou-PK-cYs"/>
+                <constraint firstItem="7TP-Vo-ZDC" firstAttribute="height" secondItem="f7y-jB-1ay" secondAttribute="height" id="9sb-3D-wrz"/>
+                <constraint firstItem="H5e-pK-kDf" firstAttribute="centerY" secondItem="fWP-HM-Kue" secondAttribute="centerY" id="AME-0q-SfN"/>
+                <constraint firstItem="7TP-Vo-ZDC" firstAttribute="bottom" secondItem="f7y-jB-1ay" secondAttribute="bottom" id="BYn-ja-yaD"/>
+                <constraint firstItem="3ya-kq-O2d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wGe-EZ-DXa" secondAttribute="centerX" id="FrC-oB-MGH"/>
+                <constraint firstItem="bkm-d3-xQh" firstAttribute="centerY" secondItem="pAW-T6-tEd" secondAttribute="centerY" id="Gcu-08-LZy"/>
+                <constraint firstItem="spk-Rf-Trs" firstAttribute="centerX" secondItem="f7y-jB-1ay" secondAttribute="centerX" id="H0w-nw-yNI"/>
+                <constraint firstItem="SIM-UP-7n6" firstAttribute="leading" secondItem="wGe-EZ-DXa" secondAttribute="leading" constant="15" id="HfC-rv-h7X"/>
+                <constraint firstItem="spk-Rf-Trs" firstAttribute="width" secondItem="f7y-jB-1ay" secondAttribute="width" id="K1N-ux-77N"/>
+                <constraint firstItem="H5e-pK-kDf" firstAttribute="leading" secondItem="fWP-HM-Kue" secondAttribute="trailing" constant="5" id="Kp0-9y-O3t"/>
+                <constraint firstItem="pyW-cq-7Cu" firstAttribute="top" secondItem="SIM-UP-7n6" secondAttribute="top" id="M2N-2b-CIF"/>
+                <constraint firstItem="OfS-Vr-S3t" firstAttribute="centerY" secondItem="yHw-bc-jpv" secondAttribute="centerY" id="NjM-ZV-oi3"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H5e-pK-kDf" secondAttribute="trailing" constant="15" id="QLc-GL-gaR"/>
+                <constraint firstItem="OfS-Vr-S3t" firstAttribute="leading" secondItem="wGe-EZ-DXa" secondAttribute="centerX" constant="30" id="S0M-1e-Ijw"/>
+                <constraint firstItem="pAW-T6-tEd" firstAttribute="leading" secondItem="wGe-EZ-DXa" secondAttribute="leading" constant="15" id="Sef-Gc-4H6"/>
+                <constraint firstItem="f7y-jB-1ay" firstAttribute="trailing" secondItem="wGe-EZ-DXa" secondAttribute="centerX" constant="-30" id="T0H-pQ-c98"/>
+                <constraint firstItem="fWP-HM-Kue" firstAttribute="leading" secondItem="wGe-EZ-DXa" secondAttribute="leading" constant="15" id="T3J-4z-U13"/>
+                <constraint firstItem="3ya-kq-O2d" firstAttribute="centerX" secondItem="7TP-Vo-ZDC" secondAttribute="centerX" id="TQl-Bq-he7"/>
+                <constraint firstItem="SIM-UP-7n6" firstAttribute="top" secondItem="yHw-bc-jpv" secondAttribute="bottom" constant="15" id="WcW-yQ-dEf"/>
+                <constraint firstItem="yHw-bc-jpv" firstAttribute="bottom" secondItem="wGe-EZ-DXa" secondAttribute="centerY" constant="-100" id="exl-jz-IAX"/>
+                <constraint firstItem="OfS-Vr-S3t" firstAttribute="width" secondItem="yHw-bc-jpv" secondAttribute="width" id="eyw-iF-tI6"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3ya-kq-O2d" secondAttribute="trailing" constant="15" id="fHB-OZ-FG4"/>
+                <constraint firstItem="OfS-Vr-S3t" firstAttribute="height" secondItem="yHw-bc-jpv" secondAttribute="height" id="g3y-FT-4dQ"/>
+                <constraint firstItem="bkm-d3-xQh" firstAttribute="leading" secondItem="pAW-T6-tEd" secondAttribute="trailing" constant="5" id="gQd-dV-ral"/>
+                <constraint firstItem="k7m-3R-rZ5" firstAttribute="bottom" secondItem="spk-Rf-Trs" secondAttribute="bottom" constant="45" id="ghB-bm-shH"/>
+                <constraint firstItem="f7y-jB-1ay" firstAttribute="top" secondItem="pAW-T6-tEd" secondAttribute="bottom" constant="25" id="jF6-hD-BER"/>
+                <constraint firstItem="pAW-T6-tEd" firstAttribute="top" secondItem="fWP-HM-Kue" secondAttribute="bottom" constant="15" id="mYv-YO-mBC"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pyW-cq-7Cu" secondAttribute="trailing" constant="15" id="nEt-XR-10f"/>
+                <constraint firstItem="7TP-Vo-ZDC" firstAttribute="width" secondItem="f7y-jB-1ay" secondAttribute="width" id="qbE-Iv-vNn"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bkm-d3-xQh" secondAttribute="trailing" constant="15" id="wLa-y7-VIl"/>
+                <constraint firstItem="k7m-3R-rZ5" firstAttribute="bottom" secondItem="3ya-kq-O2d" secondAttribute="bottom" constant="32" id="xF3-Zy-mzq"/>
+                <constraint firstItem="7TP-Vo-ZDC" firstAttribute="leading" secondItem="wGe-EZ-DXa" secondAttribute="centerX" constant="30" id="ySB-iY-ai4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="k7m-3R-rZ5"/>
+            <point key="canvasLocation" x="134" y="192"/>
+        </view>
+    </objects>
+</document>

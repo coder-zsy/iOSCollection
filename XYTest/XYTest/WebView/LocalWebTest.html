@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <title>App与WebView交互</title>
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="App与WebView交互" />
+        <meta name="author" content="张时疫" />
+        <meta name="description" content="App与WebView交互" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+        <meta name="referrer" content="no-referrer" />
+        <script type="text/javascript" src="./vconsole.min.js"></script>
+        <link rel="stylesheet" href="./baseStyle.css"/>
+        <link rel="stylesheet" href="./mainStyle.css"/>
+        <script type="text/javascript">
+            new window.VConsole();
+            </script>
+    </head>
+    
+    <body>
+        <button class="test-button" onclick="buttonClick()">点击购买</button>
+        <button class="test-button" onclick="changeTitle()">修改标题</button>
+        <button class="test-button" onclick="testOCMethod()">调用 OC 方法</button>
+        <a href="tel:123456789">拨号</a>
+        <a href='./test1.html' >test1</a>
+    </body>
+    <script>
+        const inBrowser = typeof window !== 'undefined'
+        const inWeex = typeof WXEnvironment !== 'undefined' && !!WXEnvironment.platform
+        const weexPlatform = inWeex && WXEnvironment.platform.toLowerCase()
+        const UA = inBrowser && window.navigator.userAgent.toLowerCase()
+        // export const isIE = UA && /msie|trident/.test(UA)
+        // export const isIE9 = UA && UA.indexOf('msie 9.0') > 0
+        // export const isEdge = UA && UA.indexOf('edge/') > 0
+        const isAndroid = (UA && UA.indexOf('android') > 0) || (weexPlatform === 'android')
+        const isIOS = (UA && /iphone|ipad|ipod|ios/.test(UA)) || (weexPlatform === 'ios')
+        // export const isChrome = UA && /chrome\/\d+/.test(UA) && !isEdge
+        console.log('浏览器 UA：', UA);
+        //按钮点击事件
+        function buttonClick() {
+            var params = {
+                url: 'https://www.baidu.com',
+                params: {
+                    param1: 'test',
+                    param2: 34,
+                    param3: ['aaa', 'bbb'],
+                    param4: {
+                        test: 'aa'
+                    }
+                }
+            };
+            var paramStr = JSON.stringify(params);
+            /**
+             * 调用卖卖吧APP分享方法：shareWebWithURL
+             * 参数通过json字符串传递
+             * @param url 需要分享的连接
+             */
+            if (isIOS) {
+                /** UIWebView 可以直接获取 JS 方法调用 */
+                shareWebWithURL(paramStr, 'aaa');
+                try {
+                    /**
+                     * WKWebView 需要通过 */
+                    window.webkit.messageHandlers.shareWebWithURL.postMessage(paramStr);
+                } catch (error) {
+                    console.log(error)
+                }
+            } else {
+                android.shareWebWithURL(paramStr);
+                console.log('调用 Android 方法===');
+            }
+        }
+    function shareWebWithURL(json) {
+        // 空方法
+        console.log('JS端分享测试方法', json);
+        return 'aaa';
+        // return JSON.stringify({
+        //         test: 'aa'
+        //     });
+    }
+    
+    function changeTitle() {
+        document.getElementsByTagName("title")[0].innerText = '需要设置的值1';
+        // document.title = '需要设置的值2'; // 设置title的值。
+    }
+    function testOCMethod() {
+        var params = {
+            url: 'https://www.baidu.com',
+            params: {
+                param1: 'test',
+                param2: 34,
+                param3: ['aaa', 'bbb'],
+                param4: {
+                    test: 'aa'
+                }
+
+            }
+        };
+        var paramStr = JSON.stringify(params);
+        window.webkit.messageHandlers.JSInvoteNative.postMessage(params);
+    }
+    function changeColor(param, param2) {
+        console.log('OC 调用S JS 方法，参数为：', param, param2);
+    }
+    </script>
+    
+</html>

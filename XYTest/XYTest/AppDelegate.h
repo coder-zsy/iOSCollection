@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate,CLLocationManagerDelegate>
-
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+//CLLocationManagerDelegate
 @property (strong, nonatomic) UIWindow *window;
-@property (nonatomic , strong) CLLocationManager * locationManager;
+//@property (nonatomic , strong) CLLocationManager * locationManager;
 
 @end
 

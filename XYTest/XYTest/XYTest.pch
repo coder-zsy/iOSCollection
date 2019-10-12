@@ -12,10 +12,26 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-/**日志系统*/
-#define LOG_LEVEL_DEF ddLogLevel
-#import <CocoaLumberjack/CocoaLumberjack.h>
-#define XYLOG_CONTEXT 100
-#define XYEventLog(frmt, ...) LOG_MAYBE(LOG_ASYNC_ENABLED, LOG_LEVEL_DEF, DDLogFlagVerbose, XYLOG_CONTEXT, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
+//引入Masonry两个宏 便于写布局代码
+//define this constant if you want to use Masonry without the 'mas_' prefix
+#define MAS_SHORTHAND
+//define this constant if you want to enable auto-boxing for default syntax
+#define MAS_SHORTHAND_GLOBALS
+
+#import "Masonry.h"
+#import "DeviceInfoUtils.h"
+#import "Macros.h"
+#import "PrecompileHeader.h"
+
+#define iOS9Later ([UIDevice currentDevice].systemVersion.floatValue >= 9.0f)
+#define iOS10Later ([UIDevice currentDevice].systemVersion.floatValue >= 10.0f)
+#define iOS11Later ([UIDevice currentDevice].systemVersion.floatValue >= 11.0f)
+#define iOS12Later ([UIDevice currentDevice].systemVersion.floatValue >= 12.0f)
+
+#if TARGET_OS_SIMULATOR
+#define IS_SIMULATOR true
+#else
+#define IS_SIMULATOR false
+#endif
 
 #endif /* XYTest_pch */

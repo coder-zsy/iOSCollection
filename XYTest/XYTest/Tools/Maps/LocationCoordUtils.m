@@ -9,7 +9,7 @@
 #import "LocationCoordUtils.h"
 
 /**
- 看到了很多相关文档，算法不一致也是让人伤脑筋，这里只能做参考
+参考
  */
 @implementation LocationCoordUtils
 

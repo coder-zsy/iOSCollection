@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "Singleton.h"
 typedef NS_ENUM(NSInteger , XYAuthorizationStatus) {
-    XYAuthorizationStatusNotDetermined,			//未请求授权
-    XYAuthorizationStatusRestricted,					//无相关权限，如：家长控制
-    XYAuthorizationStatusUnable,							//服务不可用
-    XYAuthorizationStatusDenied,							//已拒绝访问
-    XYAuthorizationStatusWhenInUse,					//拥有 app 使用时的权限
-    XYAuthorizationStatusAuthorized,					//拥有所有权限(使用、后台)
+    XYAuthorizationStatusNotDetermined, // 未请求授权
+    XYAuthorizationStatusRestricted, // 无相关权限，如：家长控制
+    XYAuthorizationStatusUnable, // 服务不可用
+    XYAuthorizationStatusDenied, // 已拒绝访问
+    XYAuthorizationStatusWhenInUse, // 拥有 app 使用时的权限
+    XYAuthorizationStatusAuthorized, // 拥有所有权限(使用、后台)
 };
 
 typedef void(^AuthorizationStatusBlock)(XYAuthorizationStatus status);
@@ -25,9 +25,9 @@ typedef void(^AuthorizationStatusBlock)(XYAuthorizationStatus status);
 /**这里使用单例模式主要是因为：
  * 1、获取定位权限时，定位对象会在请求定位权限时被释放，导致请求定位权限的弹框一闪而逝（有说是因为定位对象是局部变量导致的被释放，测试了下全局变量也不行...）
  * 2、也可以使用 AppDelegate 作为单例的承载对象
- singleton_interface(PermissionUtils);*/
+ singleton_interface(PermissionUtils); */
 
-
++(instancetype)sharedManager;
 /**
  * 打开设置界面*/
 - (void)openPermissionSetting ;
